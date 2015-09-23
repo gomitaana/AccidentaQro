@@ -1,6 +1,6 @@
 /*==========================================================================
   General 
-color 1: 69bc58
+color 1: 69bc58 verde     mas obscuro 549646
 color 2: c6e5d9
 
 original: 70B9B0
@@ -13,19 +13,19 @@ original: 70B9B0
     margin-top: -50px;
 }
 a {
-	color: #35A49C;
+	color: #549646;
 }
 a:hover {
-	color: #69bc58;
+	color: #549646;
 }
 
 /* menu */
 .nav>li>a:hover {
-	color: #79CDC0;
+	color: #69bc58;
 }
 
 .navbar .navbar-nav > .active > a {
-	color: #79CDC0;
+	color: #69bc58;
 }
 
 /* flexslider */
