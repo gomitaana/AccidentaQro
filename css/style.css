@@ -65,6 +65,11 @@ article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
 	display: block;
 }
 
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #dedede;
+    color: black;
+}
+
 small {
 	font-size: 70%;
 	font-weight: 100;
