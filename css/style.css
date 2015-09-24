@@ -13,7 +13,7 @@ color 2: c6e5d9
 original: 70B9B0
   ========================================================================== */
 body {
-	color:#777;
+	color:#000;
 	background: #f7f7f7;
 	font-size: 18px;
 	line-height: 1.6em;
@@ -78,6 +78,11 @@ label.control-label{
 
 .form-horizontal .control-label {
     text-align: left;
+}
+
+.tab-opt{
+    background-color: #f7f7f7;
+    color:#000;
 }
 
 small {
@@ -1037,7 +1042,9 @@ a.socialIcon:hover, .socialHoverClass {
 	border-bottom: 4px solid;
 }
 
-
+.nav-tabs> li> a{
+    color: #000;
+}
 
 /* ========================================
 Media queries
