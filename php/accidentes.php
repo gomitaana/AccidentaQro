@@ -8,6 +8,20 @@ function finish($msg, $db = null) {
   exit;
 }
 
+function nombreTipo($category) {
+  switch ($category) {
+    case 'T':
+      return 'Total';
+    case 'FA':
+      return 'Fatal';
+    case 'NF':
+      return 'No fatal';
+    case 'SD':
+      return 'Solo daños';
+  }
+  return 'Hay un error';
+}
+
 $data = array('mes' => 'T', 'causa' => 'T', 'sexo' => 'T', 'alcohol' => 'T', 'cinturon' => 'T');
 
 $mainDB = mysqli_connect('localhost','provedor', 'D6pM5PyVuBPnK8PV', 'accidentaqro');
@@ -32,7 +46,7 @@ if(!empty($data['mes']) && !empty($data['causa']) && !empty($data['sexo'])
   $res = array();
   $stmt->bind_result($tipo, $accidentes);
   while($stmt->fetch()) {
-    $res[] = array('tipo' => $tipo, 'accidentes' => $accidentes);
+    $res[] = array('tipo' => nombreTipo($tipo), 'accidentes' => $accidentes);
   }
   
   echo json_encode($res);
