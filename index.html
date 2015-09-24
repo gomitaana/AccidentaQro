@@ -330,7 +330,7 @@ una prioridad informar a jovenes de 18-25 años sobre las cifras de accidentes v
 		    data.addColumn('number', 'Accidentes');
 
 		    data.addRows(jsonData);
-
+			var w = jQuery('#tabchart1').width();
 	        var options = {
 	        	'title':'Accidentes 2014',
 	    		animation:{
@@ -338,7 +338,7 @@ una prioridad informar a jovenes de 18-25 años sobre las cifras de accidentes v
 					easing: 'out',
 				},
 				height: 400,
-				width: jQuery('#tabchart1').width(),
+				width: w
 			};
 			var id_chart = 1;
 			var chart1 = new google.visualization.ColumnChart(document.getElementById('chart1'));
@@ -371,20 +371,73 @@ una prioridad informar a jovenes de 18-25 años sobre las cifras de accidentes v
 				  },
 			    }).responseText;
 	          var jsonData = eval(jsonString);
-	          data.removeRows(0, data.getNumberOfRows());
-		      data.addRows(jsonData);
+	          
+			  data = new google.visualization.DataTable();
+			  
+			  var gender = [ 'Se fugo', 'Mujeres', 'Hombres', 'Total'];
+			  if(id_chart == 4) {
+				options = {
+				'title':'Accidentes 2014',
+				 vAxis: { logScale: true },
+				hAxis: { 
+				  gridlines: {
+					count: gender.length,
+					color : '#f7f7f7',
+				  }
+				},
+				height: 400,
+				width: w,
+				};
+			  } else {
+				options = {
+	          	  'title':'Accidentes 2014',
+	    		  animation:{
+					  duration: 700,
+					  easing: 'out',
+				  },
+				  height: 400,
+				  width: w
+				};
+			  }
+
 		      switch(id_chart) {
 		      	case 1:
+					data.addColumn('string', 'Tipo');
+		            data.addColumn('number', 'Accidentes');		  
+		            data.addRows(jsonData);
 		      		drawChart(chart1);
 		      		break;
 		      	case 2:
+					data.addColumn('string', 'Tipo');
+		            data.addColumn('number', 'Accidentes');		  
+		            data.addRows(jsonData);
 		      		drawChart(chart2);
 		      		break;
 		      	case 3:
+					data.addColumn('string', 'Mes');
+		            data.addColumn('number', 'Accidentes');		  
+		            data.addRows(jsonData);
 		      		drawChart(chart3);
 		      		break;
 		      	case 4:
+					data.addColumn('string', 'Tipo');
+					data.addColumn('number', 'Sexo');
+		            data.addColumn('number', 'Accidentes');
+					data.addColumn('string', 'Descripcion');	
+					data.addColumn('number', 'Accidentes');					
+		            data.addRows(jsonData);
 		      		drawChart(chart4);
+					
+					for ( var i = 1; i <= gender.length; i ++ ){
+					  $('#chart4 svg text[text-anchor="middle"]:contains("'+i+'")').text(function(j,t){
+						if (t == i){
+						if (i >= gender.length + 1 || i < 1){
+							return " ";
+						}
+						return gender[i - 1];
+						}
+					  });
+					}
 		      		break;
 		      }
 		    }

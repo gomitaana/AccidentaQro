@@ -1096,3 +1096,7 @@ Media queries
 		margin-bottom: 30px;
 	}
 }
+
+#equipo> div> div> div{
+	text-align: center;
+}
