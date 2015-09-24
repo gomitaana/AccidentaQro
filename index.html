@@ -74,7 +74,113 @@ una prioridad informar a jovenes de 18-25 años sobre las cifras de accidentes v
         <section id="info" class="section">
             <div class="container"> 
                 <h2>Informacion</h2>
-                <p>Aqui van las tablas</p>
+                <div class="col-md-12">
+                    <div class="col-md-4">
+                        <!--Filtros-->
+                        <form class="form-horizontal">
+                        <fieldset>
+                        <!-- Form Name -->
+                        <legend>Filtros</legend>
+                        <!-- Sexo -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="sexo">Sexo</label>
+                          <div class="col-md-4">
+                            <select id="sexo" name="sexo" class="form-control">
+                              <option value="1">Hombre</option>
+                              <option value="2">Mujer</option>
+                              <option value="3">No Especificado</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Causa -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="causa">Causa del accidente</label>
+                          <div class="col-md-4">
+                            <select id="causa" name="causa" class="form-control">
+                              <option value="1">Conductor</option>
+                              <option value="2">Peatón o Pasajero</option>
+                              <option value="3">Falla del Vehículo</option>
+                              <option value="4">Mala Condición del Camino</option>
+                              <option value="5">Otra</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- alcohol -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="alcohol">Aliento alcoholico</label>
+                          <div class="col-md-4">
+                            <select id="alcohol" name="alcohol" class="form-control">
+                              <option value="1">Si</option>
+                              <option value="2">No</option>
+                              <option value="3">Se ignora</option>
+                              <option value="4">No especifica</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- clase -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="clase">Clase</label>
+                          <div class="col-md-4">
+                            <select id="clase" name="clase" class="form-control">
+                              <option value="1">Fatal</option>
+                              <option value="2">No Fatal</option>
+                              <option value="3">Solo  Daños</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- cinto -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="cinturon">Uso del cinturón</label>
+                          <div class="col-md-4">
+                            <select id="cinturon" name="cinturon" class="form-control">
+                              <option value="1">Si</option>
+                              <option value="2">No</option>
+                              <option value="3">Se Ignora</option>
+                              <option value="4">No Especifica</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Mes -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="mes">Mes</label>
+                          <div class="col-md-4">
+                            <select id="mes" name="mes" class="form-control">
+                              <option value="1">Enero</option>
+                              <option value="2">Febrero</option>
+                              <option value="3">Marzo</option>
+                              <option value="4">Abril</option>
+                              <option value="5">Mayo</option>
+                              <option value="6">Junio</option>
+                              <option value="7">Julio</option>
+                              <option value="8">Agosto</option>
+                              <option value="9">Septiembre</option>
+                              <option value="10">Octubre</option>
+                              <option value="11">Noviembre</option>
+                              <option value="12">Diciembre</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                          <label class="col-md-3 control-label" for="button"></label>
+                          <div class="col-md-4">
+                            <button id="button" name="button" class="btn btn-success">Consultar</button>
+                          </div>
+                        </div>
+
+                        </fieldset>
+                    </form>
+
+                    </div>
+                    <div class="col-md-8" style="background:green">
+                    </div>
+                </div>
             </div>
 		</section>
         
